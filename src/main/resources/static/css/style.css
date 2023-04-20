@@ -1,0 +1,10 @@
+/* general*/
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* home */
+.home_box {
+	deisplay: flex;
+}

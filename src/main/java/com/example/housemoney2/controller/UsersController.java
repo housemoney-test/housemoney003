@@ -1,4 +1,4 @@
-package controller;
+package com.example.housemoney2.controller;
 
 import javax.validation.Valid;
 
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import form.CreateUserForm;
-import form.LoginUserForm;
-import service.CreateUserService;
-import service.LoginUserService;
+import com.example.housemoney2.form.CreateUserForm;
+import com.example.housemoney2.form.LoginUserForm;
+import com.example.housemoney2.service.CreateUserService;
+import com.example.housemoney2.service.LoginUserService;
 
 @Controller
 public class UsersController {
