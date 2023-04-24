@@ -31,35 +31,35 @@ public class UsersController {
 		return "users/login";
 	}
 
-//	@PostMapping("/login")
-//	public String login(@Valid @ModelAttribute("loginUserForm")LoginUserForm loginUserForm, 
-//			BindingResult result, Model model) {
-//		//パスが不一致の場合
-//		if () {
-//		return "users/login"
-//
-//		}
-//
-//		//パスが一致している場合
-//
-//		return "users/login";
-//	}
-//
-//	//新規登録
-//	@GetMapping("/signUp")
-//	public String create(Model model) {
-//		model.addAttribute("form", new CreateUserForm());
-//		return "users/signUp";
-//	}
-//
-//	//ユーザー新規登録
-//	@PostMapping
-//	public String create(@Valid @ModelAttribute("form") CreateUserForm form,
-//			BindingResult result, Model model) {
-//
-//		createUserService.create(form);
-//		return "redirect:/login";
-//	}
+	@PostMapping("/login")
+	public String login(@Valid @ModelAttribute("loginUserForm")LoginUserForm loginUserForm, 
+			BindingResult result, Model model) {
+		//パスが不一致の場合
+		if () {
+		return "users/login"
+
+		}
+
+		//パスが一致している場合
+
+		return "users/login";
+	}
+
+	//新規登録
+	@GetMapping("/signUp")
+	public String create(Model model) {
+		model.addAttribute("form", new CreateUserForm());
+		return "users/signUp";
+	}
+
+	//ユーザー新規登録
+	@PostMapping
+	public String create(@Valid @ModelAttribute("form") CreateUserForm form,
+			BindingResult result, Model model) {
+
+		createUserService.create(form);
+		return "redirect:/login";
+	}
 
 }
 

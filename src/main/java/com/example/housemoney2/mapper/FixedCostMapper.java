@@ -16,5 +16,7 @@ public interface FixedCostMapper {
 	int edit(FixedCost entity);
 
 	FixedCost findById(int id);
+
+	FixedCost deleteById(int id);
     
 }

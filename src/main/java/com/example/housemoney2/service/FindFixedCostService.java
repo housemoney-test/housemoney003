@@ -17,5 +17,10 @@ public class FindFixedCostService {
     public FixedCost getFindById(int id) {
         return fixedCostMapper.findById(id);
     }
+
+    @Transactional
+	public FixedCost deleteById(int id) {
+		return fixedCostMapper.deleteById(id);
+	}
     
 }
