@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>日記一覧</title>
+<link href="calendar.css" rel="styleSheet">
 </head>
 <body>
 
+	<div class="wrapper">
+      <h1 id="calendarHeader"></h1>
+      <div id="next-prev-button">
+          <button id="prev" onclick="prev()">‹</button>
+          <button id="next" onclick="next()">›</button>
+      </div>
+      <div id="calendar"></div>
+  </div>
+
+    <script src="calendar.js"></script>
 </body>
 </html>
