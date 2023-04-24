@@ -1,7 +1,5 @@
 package com.example.housemoney2.controller;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +12,8 @@ import com.example.housemoney2.form.CreateUserForm;
 import com.example.housemoney2.form.LoginUserForm;
 import com.example.housemoney2.service.CreateUserService;
 import com.example.housemoney2.service.LoginUserService;
+
+import jakarta.validation.Valid;
 
 @Controller
 public class UsersController {
@@ -35,8 +35,8 @@ public class UsersController {
 	public String login(@Valid @ModelAttribute("loginUserForm")LoginUserForm loginUserForm, 
 			BindingResult result, Model model) {
 		//パスが不一致の場合
-		if () {
-		return "users/login"
+		if (true) {
+		return "users/login";
 
 		}
 
