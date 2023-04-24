@@ -27,6 +27,7 @@ public class PaymentsController {
 	@Autowired
 	private FindSpendingService findSpendingService;
 	
+	
 	@GetMapping("/create")
 	public String create(Model model) {
 		model.addAttribute("form", new CreateSpendingForm());
@@ -56,6 +57,12 @@ public class PaymentsController {
 	@PostMapping("/fixed")
 	public String fixed(Model model) {
 		return "payments/fixed";
+	}
+	
+	@PostMapping("delete")
+	public String delete(@RequestParam Integer id) {
+		findFixedCostService.deleteById(id);
+	    return "redirect:/payments/fixed";
 	}
 	
 	@GetMapping("/income_edit")
