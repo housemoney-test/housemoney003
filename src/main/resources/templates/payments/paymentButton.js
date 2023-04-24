@@ -1,5 +1,6 @@
 /**
- *
+ * 入金ボタンをクリック→入金フォームに変更＋入金ボタンの無効化
+ * 出金ボタンをクリック→出金フォームに変更＋出金ボタンの無効化
  */
 
 const incomeButton = document.getElementById("incomeButton");
