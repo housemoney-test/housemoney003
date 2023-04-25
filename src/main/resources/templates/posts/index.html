@@ -3,18 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>HouseMoney003 | 日記一覧</title>
-<link href="calendar.css" rel="styleSheet">
+<link href="posts.css" rel="styleSheet">
 </head>
 <body>
-
 	<div class="wrapper">
-      <h1 id="calendarHeader"></h1>
-      <div id="next-prev-button">
-          <button id="prev" onclick="prev()">‹</button>
-          <button id="next" onclick="next()">›</button>
-      </div>
-      <div id="calendar"></div>
-  </div>
+		<div class="right-contents">
+			<button type="button">日記登録</button>
+		</div>
+
+    	<h1 id="calendarHeader"></h1>
+
+    	<div id="next-prev-button">
+        	<button id="prev" onclick="prev()">‹</button>
+        	<button id="next" onclick="next()">›</button>
+    	</div>
+
+		<div id="calendar"></div>
+	</div>
 
     <script src="calendar.js"></script>
 </body>
