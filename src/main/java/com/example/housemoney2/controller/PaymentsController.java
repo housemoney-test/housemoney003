@@ -9,20 +9,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.housemoney2.entity.FixedCost;
 import com.example.housemoney2.entity.Spending;
 import com.example.housemoney2.form.CreateSpendingForm;
 import com.example.housemoney2.form.EditFixedCostForm;
 import com.example.housemoney2.form.EditSpendingForm;
-import com.example.housemoney2.service.FindFixedCostService;
 import com.example.housemoney2.service.FindSpendingService;
 
 @Controller
 @RequestMapping("/payments")
 public class PaymentsController {
-	
-	@Autowired
-	private FindFixedCostService findFixedCostService;
 	
 	@Autowired
 	private FindSpendingService findSpendingService;
@@ -41,15 +36,15 @@ public class PaymentsController {
 	
 	@GetMapping("/fixed")
 	public String fixed(@RequestParam int id, EditFixedCostForm editFixedCostForm, Model model) {
-		//FixedCost型にgetFindByIdの戻り値を格納
-	    FixedCost fixedCost = findFixedCostService.getFindById(id);
-	    //fixedCost型にFixedCost型の情報を入れかえる
-	    fixedCost.setId(fixedCost.getId());
-	    fixedCost.setRentCosts(fixedCost.getRentCosts());
-	    fixedCost.setUtilityCosts(fixedCost.getUtilityCosts());
-	    fixedCost.setPhoneCosts(fixedCost.getPhoneCosts());
-	    fixedCost.setOthers(fixedCost.getOthers());
-        model.addAttribute("editFixedCostForm", fixedCost);
+//		//FixedCost型にgetFindByIdの戻り値を格納
+////	    FixedCost fixedCost = findFixedCostService.getFindById(id);
+//	    //fixedCost型にFixedCost型の情報を入れかえる
+//	    fixedCost.setId(fixedCost.getId());
+//	    fixedCost.setRentCosts(fixedCost.getRentCosts());
+//	    fixedCost.setUtilityCosts(fixedCost.getUtilityCosts());
+//	    fixedCost.setPhoneCosts(fixedCost.getPhoneCosts());
+//	    fixedCost.setOthers(fixedCost.getOthers());
+//        model.addAttribute("editFixedCostForm", fixedCost);
         model.addAttribute("form", new EditFixedCostForm());
 		return "payments/fixed";
 	}
@@ -61,7 +56,7 @@ public class PaymentsController {
 	
 	@PostMapping("delete")
 	public String delete(@RequestParam Integer id) {
-		findFixedCostService.deleteById(id);
+//		findFixedCostService.deleteById(id);
 	    return "redirect:/payments/fixed";
 	}
 	
